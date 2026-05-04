@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 260px;
+      font-family: sans-serif;
+      padding: 15px;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #202122;
+    }
+    h3 { margin-top: 0; margin-bottom: 15px; font-size: 16px; border-bottom: 1px solid #c8ccd1; padding-bottom: 5px; }
+    .setting { margin-bottom: 12px; }
+    label { display: flex; align-items: center; font-size: 14px; cursor: pointer; }
+    select { margin-top: 5px; width: 100%; padding: 4px; cursor: pointer; }
+    input[type="checkbox"] { margin-right: 8px; cursor: pointer; width: 16px; height: 16px; }
+    .note { font-size: 11px; color: #54595d; margin-top: 15px; border-top: 1px dashed #c8ccd1; padding-top: 10px; }
+  </style>
+</head>
+<body>
+  <h3>Wikipedia View Options</h3>
+  
+  <div class="setting">
+    <label for="font-select"><b>Display Font</b></label>
+    <select id="font-select">
+      <option value="cascadia">Cascadia Mono</option>
+      <option value="times">Times New Roman</option>
+    </select>
+  </div>
+
+  <div class="setting">
+    <label>
+      <input type="checkbox" id="spacing-toggle">
+      Reduced Line Spacing
+    </label>
+  </div>
+
+  <div class="setting">
+    <label>
+      <input type="checkbox" id="sidebar-toggle">
+      References Sidebar
+    </label>
+  </div>
+
+  <div class="note">Modifying these settings will automatically reload the active Wikipedia tab to safely apply structural changes.</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
